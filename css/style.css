@@ -11,22 +11,22 @@ body {
 
 header {
 	background-color: white;
-	margin-bottom: 2.7%;
+	margin-bottom: 30px;
 }
 
 /* IMMAGINE + SCRITTA */
 .logo {
-	padding: 15px 0;
+	padding: 20px 10px;
 	margin-left: 20px;
 }
 
 .logo-img {
-	width: 75px;
+	width: 55px;
 	vertical-align: middle;
 }
 
 .logo-text {
-	font-size: 50px;
+	font-size: 45px;
 	font-family: Arial, Helvetica, sans-serif;
 	display: inline;
 	vertical-align: middle;
@@ -34,15 +34,16 @@ header {
 
 .container {
 	margin: 0 auto;
-	width: 1200px;
-	background-color: white;
+	max-width: 1200px;
+	padding: 30px;
 }
 
 .button-section {
+	background-color: white;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	padding: 20px 40px;
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 }
 
 .add-task {
@@ -58,18 +59,27 @@ header {
 }
 
 .list-section {
+	background-color: white;
 	padding: 20px 40px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
+
 .todolist {
 	list-style-type: none;
-	line-height: 2;
+	line-height: 2.5;
+}
+
+.todolist li {
+	position: relative;
+	border-bottom: 1px solid black;
 }
 
 .task {
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 20px;
+	display: inline-block;
+	margin-right: 10px;
 }
 
 .done {
@@ -80,4 +90,13 @@ header {
 	color: rgb(255, 0, 0);
 	text-decoration-color: rgb(255, 0, 0);
 	text-decoration-line: line-through;
+}
+
+.todolist li i {
+	font-size: 16px;
+	color: rgb(255, 0, 0);
+	position: absolute;
+	right: 10px;
+	top: 17.5px;
+	cursor: pointer;
 }

@@ -41,6 +41,12 @@ createApp({
 					state: true,
 				},
 			],
+			currentElementToRemove: [],
 		};
+	},
+	methods: {
+		removeTodo(index) {
+			this.currentElementToRemove.push(index);
+		},
 	},
 }).mount("#app");
