@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<!-- HEADER -->
+				<div class="logo">
+					<img class="logo-img" src="img/Logo.png" alt="Logo" />
+					<h1 class="logo-text">Toboolist</h1>
+				</div>
+			</header>
+			<main>
+				<!-- "BOTTONE" -->
+				<div class="button-section container">
+					<div class="add-task">Add Task</div>
+				</div>
+				<!-- LISTA -->
+				<div class="list-section container">
+					<ul class="todolist">
+						<li v-for="(todoElement, index) in todoList">
+							<div
+								class="task"
+								:class="[todoElement.state ? 'done' : 'notDone']"
+							>
+								{{todoElement.text}}
+							</div>
+						</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+
+		<!-- VUE -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<!-- MY JS -->
+		<script src="js/main.js"></script>
+	</body>
+</html>
