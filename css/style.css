@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+[v-cloak] {
+	display: none;
+}
+
 body {
 	background-color: rgb(247, 247, 252);
 	font-family: Arial, Helvetica, sans-serif;
@@ -46,6 +50,12 @@ header {
 	margin-bottom: 5px;
 }
 
+#addTodo {
+	padding: 10px 15px;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
 .add-task {
 	font-size: 18px;
 	display: inline-block;
@@ -53,7 +63,7 @@ header {
 	border: 1px solid rgb(63, 162, 255);
 	color: white;
 	padding: 10px 15px;
-	border-radius: 6px;
+	/* border-radius: 6px; */
 	cursor: pointer;
 	user-select: none;
 }
@@ -76,6 +86,7 @@ header {
 }
 
 .task {
+	padding: 0 10px;
 	font-weight: normal;
 	font-size: 20px;
 	display: inline-block;
@@ -83,12 +94,15 @@ header {
 }
 
 .done {
-	color: rgb(16, 192, 69);
+	min-width: 35%;
+	background-color: rgb(16, 192, 69, 0.5);
 }
 
 .notDone {
-	color: rgb(255, 0, 0);
+	min-width: 35%;
+	background-color: rgba(255, 0, 0, 0.5);
 	text-decoration-color: rgb(255, 0, 0);
+	text-decoration-thickness: 3px;
 	text-decoration-line: line-through;
 }
 

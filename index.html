@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<div id="app">
+		<div id="app" v-cloak>
 			<header>
 				<!-- HEADER -->
 				<div class="logo">
@@ -26,7 +26,14 @@
 				<div class="container">
 					<!-- "BOTTONE" -->
 					<div class="button-section">
-						<div class="add-task">Add Task</div>
+						<input
+							type="text"
+							name="addTodo"
+							id="addTodo"
+							placeholder="Inserire nuova task"
+							v-model="inputValue"
+						/>
+						<div class="add-task" @click="addTodo(inputValue)">Add Task</div>
 					</div>
 					<!-- LISTA -->
 					<div class="list-section">

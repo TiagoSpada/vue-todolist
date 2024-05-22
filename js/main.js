@@ -42,11 +42,20 @@ createApp({
 				},
 			],
 			currentElementToRemove: [],
+			inputValue: "",
 		};
 	},
 	methods: {
 		removeTodo(index) {
 			this.currentElementToRemove.push(index);
+		},
+		addTodo(inputValue) {
+			if (inputValue) {
+				this.todoList.push({
+					text: inputValue,
+					state: false,
+				});
+			}
 		},
 	},
 }).mount("#app");
