@@ -91,17 +91,19 @@ header {
 	font-size: 20px;
 	display: inline-block;
 	margin-right: 10px;
+	cursor: pointer;
+	user-select: none;
 }
 
 .done {
 	min-width: 35%;
-	background-color: rgb(16, 192, 69, 0.5);
+	background-color: rgb(16, 192, 69, 0.6);
 }
 
 .notDone {
 	min-width: 35%;
-	background-color: rgba(255, 0, 0, 0.5);
-	text-decoration-color: rgb(255, 0, 0);
+	background-color: rgba(255, 0, 0, 0.6);
+	/* text-decoration-color: rgb(255, 0, 0); */
 	text-decoration-thickness: 3px;
 	text-decoration-line: line-through;
 }

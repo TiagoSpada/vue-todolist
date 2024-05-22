@@ -28,10 +28,11 @@
 					<div class="button-section">
 						<input
 							type="text"
-							name="addTodo"
+							name="addTodoElement"
 							id="addTodo"
 							placeholder="Inserire nuova task"
 							v-model="inputValue"
+							@keyup.enter="addTodo(inputValue)"
 						/>
 						<div class="add-task" @click="addTodo(inputValue)">Add Task</div>
 					</div>
@@ -45,6 +46,7 @@
 								<div
 									class="task"
 									:class="[todoElement.state ? 'done' : 'notDone']"
+									@click="changeState(index)"
 								>
 									{{todoElement.text}}
 								</div>

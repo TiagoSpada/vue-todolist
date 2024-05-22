@@ -57,5 +57,8 @@ createApp({
 				});
 			}
 		},
+		changeState(index) {
+			this.todoList[index].state = !this.todoList[index].state;
+		},
 	},
 }).mount("#app");
